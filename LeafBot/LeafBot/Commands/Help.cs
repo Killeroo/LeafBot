@@ -25,7 +25,7 @@ namespace LeafBot.Commands
         Description = $"Guardian of this discord server {DiscordEmoji.FromName(ctx.Client, ":shield:")}, protector of bunnies {DiscordEmoji.FromName(ctx.Client, ":rabbit:")} and back street dealer of cute animal pictures {DiscordEmoji.FromName(ctx.Client, ":otter:")}.",
         Footer = new DiscordEmbedBuilder.EmbedFooter
         {
-          Text = "Brought to you with <3 by Kubi, Genghis & pals"
+          Text = "Brought to you with <3 by Rabbits"
         },
       };
 

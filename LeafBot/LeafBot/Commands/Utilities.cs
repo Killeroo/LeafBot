@@ -28,7 +28,7 @@ namespace LeafBot.Commands
       };
       var embedFooter = new DiscordEmbedBuilder.EmbedFooter
       {
-        Text = "Brought to you with <3 by Kubi, Genghis & pals"
+        Text = "Brought to you with <3 by Rabbits"
       };
 
       var embed = new DiscordEmbedBuilder
