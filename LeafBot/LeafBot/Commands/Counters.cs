@@ -14,20 +14,19 @@ namespace LeafBot.Commands
   {
     private Random rng = new Random();
 
-    [Command("shower")]
-    [Description("Track how many times Eddie showers... wait why do we do this again?")]
-    [Aliases("eddieshowering", "eddieshower")]
-    public async Task EddieShowering(CommandContext ctx)
+    [Command("snake")]
+    [Description("I have been instructed to look out for snakes... Dam server is full of them... ")]
+    [Aliases("snakery", "snek")]
+    public async Task SerpentCount(CommandContext ctx)
     {
       // Increment stat
-      Stats.EddieShowerCount++;
+      Stats.SnakeCount++;
 
       // I mean this save is a bit redundant because the save function is on a timer,
       // but hopes for the moment while leafbot sometimes gets closed before the backup occurs
       await Stats.Save(ctx.Client);
 
-      await ctx.Channel.SendMessageAsync($"Eddie has stopped playing to go shower {Stats.EddieShowerCount} times {DiscordEmoji.FromName(ctx.Client, ":shower:")}" +
-        $"{Environment.NewLine}{Formatter.Italic("(he must be hella stanky)")}");
+      await ctx.Channel.SendMessageAsync($"Someone has committed an act of snakery {Stats.SnakeCount} times {DiscordEmoji.FromName(ctx.Client, ":snake:")}");
     }
 
     [Command("buns")]
