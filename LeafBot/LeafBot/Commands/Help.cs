@@ -58,6 +58,7 @@ namespace LeafBot.Commands
       DiscordEmoji searchEmoji = DiscordEmoji.FromName(ctx.Client, ":mag:");
       DiscordEmoji utilityEmoji = DiscordEmoji.FromName(ctx.Client, ":gear:");
       DiscordEmoji helpEmoji = DiscordEmoji.FromName(ctx.Client, ":books:");
+      DiscordEmoji funEmoji = DiscordEmoji.FromName(ctx.Client, ":confetti_ball:");
 
       // So there is a way to list all commands attached to the client's CommandNext 
       // but that list contains ALL aliases of commands so I am just going to add them manually
@@ -68,9 +69,6 @@ namespace LeafBot.Commands
         $"-> {Formatter.InlineCode("sleepy")} {Environment.NewLine}" +
         $"-> {Formatter.InlineCode("curious")} {Environment.NewLine}" +
         $"-> {Formatter.InlineCode("angry")} {Environment.NewLine}", true);
-      embed.AddField($"Counters {counterEmoji}",
-        $"-> {Formatter.InlineCode("eddieshower")} {Environment.NewLine}" +
-        $"-> {Formatter.InlineCode("buns")} {Environment.NewLine}", true);
       embed.AddField($"Games {gamesEmoji}",
         $"-> {Formatter.InlineCode("rollthedice")} {Environment.NewLine}" +
         $"-> {Formatter.InlineCode("coinflip")} {Environment.NewLine}" +
@@ -87,6 +85,10 @@ namespace LeafBot.Commands
          $"-> {Formatter.InlineCode("help")} {Environment.NewLine}" +
          $"-> {Formatter.InlineCode("about")} {Environment.NewLine}" +
          $"-> {Formatter.InlineCode("commands")} {Environment.NewLine}", true);
+      embed.AddField($"Counters {counterEmoji}",
+        $"-> {Formatter.InlineCode("buns")} {Environment.NewLine}", true);
+      embed.AddField($"Fun {funEmoji}",
+        $"-> {Formatter.InlineCode("kanye")} {Environment.NewLine}", true);
 
       await ctx.Channel.SendMessageAsync(embed: embed);
     }
